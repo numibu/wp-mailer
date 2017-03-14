@@ -1,0 +1,287 @@
+/* Базовый контейнер табов */
+.tabs {
+  min-width: 320px;
+  max-width: 800px;
+  padding: 0px;
+  margin: 25px auto 0 auto; 
+}
+/* стили секций с содержанием */
+section {
+  display: none;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+.tabs .tabs-input {
+  display: none;
+}
+/* стили вкладок (табов) */
+.tabs label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #aaa;
+  border: 1px solid #ddd;
+  background: #f1f1f1;
+  border-radius: 3px 3px 0 0;
+}
+/* шрифт-иконки от Font Awesome в формате Unicode */
+.tabs label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+/*
+.tabs label[for*="1"]:before {
+  content: "\f19a";
+}
+.tabs label[for*="2"]:before {
+  content: "\f17a";
+}
+.tabs label[for*="3"]:before {
+  content: "\f13b";
+}
+.tabs label[for*="4"]:before {
+  content: "\f13c";
+}
+*/
+/* изменения стиля заголовков вкладок при наведении */
+.tabs label:hover {
+  color: #888;
+  cursor: pointer;
+}
+/* стили для активной вкладки */
+.tabs input:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 1px solid #009933;
+  border-bottom: 1px solid #fff;
+  background: #fff;
+}
+/* активация секций с помощью переключателя :checked */
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+  display: block;
+}
+/* медиа запросы для различных типов носителей */  
+@media screen and (max-width: 680px) {
+  .tabs label {
+    font-size: 0;
+  }
+ 
+  .tabs label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .tabs label {
+    padding: 15px;
+  }
+}
+
+.taskList .sendRow .deleteCell {
+    padding-left: 25px;
+    color: red;
+    cursor: pointer;
+}
+
+.taskList .sendRow .deleteCell:hover {
+    color: #aaa;
+}
+
+.taskList .sendRow .sendCell {
+    padding-left: 25px;
+    color: green;
+    cursor: pointer;
+}
+
+.taskList .sendRow .sendCell:hover {
+    color: #aaa;
+}
+
+.taskList .sendRow td {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.taskList {
+    border-spacing: 0px;
+}
+
+.odd-tr { background-color: #fff; }
+
+.even-tr { background-color: #ddd; }
+
+.sendAll{
+    color: green;
+    cursor: pointer;
+}
+
+.deleteAll{
+    margin-left: 25px;
+    color: red;
+    cursor: pointer;
+}
+
+.sendAll:hover, .deleteAll:hover {color: #aaa;}
+
+.itemPostToMailer:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+/* ################# Accordion container ################### */
+
+/*plugin css*/
+
+/*skin Plank [.skinPlank]*/
+ .skinPlank, .skinPlank ul {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.skinPlank ul {
+  display:none;
+  /*zoom:1*/
+}
+.skinPlank li {
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:block;
+  /*zoom:1;*/
+}
+.skinPlank a {
+  font:19px/1.2em Arial, Helvetica, sans-serif;
+  color:#fff;
+  background:#7F7F7F;
+  padding:6px 25px 4px 10px;
+  display:inline-block;
+  text-decoration:none;
+  box-shadow:inset 0 5px 10px -5px #454545;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position:relative
+}
+.skinPlank a:hover, .skinPlank a.cur {
+  background:#5c5c5c
+}
+.skinPlank ul li {
+  border-top:1px solid #ccc;
+}
+.skinPlank ul a {
+  font:12px/1.2em Arial, Helvetica, sans-serif;
+  color:#808080;
+  padding:7px 10px 7px 10px;
+  background:#E5E8EB;
+  box-shadow:none;
+  display:block;
+  text-decoration:underline
+}
+.skinPlank ul a.cur {
+  color:#000;
+  background:#E5E8EB;
+}
+.skinPlank ul a:hover {
+  background:#CED3D9
+}
+.skinPlank ul ul li {
+  border-top:1px solid #b1b7be;
+  margin:0 0 0 10px
+}
+.skinPlank ul ul a, .skinPlank ul ul a.cur {
+  background:#CED3D9
+}
+.skinPlank ul ul a:hover {
+  background:#c0c5cc
+}
+.skinPlank a.harFull:before {
+  /*zoom:1;*/
+  content:'';
+  width: 0;
+  height: 0;
+  border:0;
+  border-top: 4px solid transparent;
+  border-left: 5px solid #fff;
+  border-bottom: 4px solid transparent;
+  display:block;
+  margin:7px 0 0 10px;
+  position:absolute;
+  top:6px;
+  right:10px;
+}
+.skinPlank ul a.harFull:before {
+  /*zoom:1;*/
+  content:'';
+  border-left-color: #7d7d7d;
+  margin-top:4px;
+}
+/*skin Clear [.skinClear]*/
+ .skinClear, .skinClear ul {
+  list-style:none;
+  padding:0;
+  margin:0;
+  font:14px/1.2em Arial, Helvetica, sans-serif
+}
+.skinClear ul {
+  display:none;
+  margin:0 0 0 10px;
+  /*zoom:1*/
+}
+.skinClear li {
+  list-style:none;
+}
+.skinClear a {
+  color:#888;
+  display:block;
+  position:relative;
+  text-decoration:none;
+  padding:1px 0 1px 9px;
+}
+.skinClear a:before {
+  /*zoom:1;*/
+  content:'';
+  width: 0;
+  height: 0;
+  border:0;
+  border-top: 3px solid transparent;
+  border-left: 4px solid #ccc;
+  border-bottom: 3px solid transparent;
+  display:inline-block;
+  position:absolute;
+  top:5px;
+  left:0px;
+  margin:0 4px 0 0;
+}
+.skinClear a.harFull.harOpen:before {
+  border:0;
+  border-left: 3px solid transparent;
+  border-top: 4px solid #000;
+  border-right: 3px solid transparent;
+  top:7px;
+}
+.skinClear a.harFull:before {
+  border:0;
+  border-top: 3px solid transparent;
+  border-left: 4px solid #000;
+  border-bottom: 3px solid transparent;
+  top:5px;
+}
+.skinClear a:hover {
+  text-decoration:underline;
+}
+.skinClear a.cur {
+  color:#000
+}
+.skinClear a.harOpen {
+  color:#000
+}
+/* ################ END Accordion ######################### */
